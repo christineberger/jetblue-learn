@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: A replica of the postgres database
     database: raw
     tables:
       - name: customers
@@ -23,11 +24,13 @@ sources:
               - not_null
 
           - name: status
+            description: "{{ doc('order_status') }}"
             tests:
               - accepted_values:
                   values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
 
           - name: user_id
+            description: Foreign key to customers
             tests:
               - not_null
               - relationships:
@@ -37,7 +40,7 @@ sources:
   - name: stripe
     database: raw
     loaded_at_field: _batched_at
-    loader: airflow     # this is just for documentation
+    loader: airflow
     freshness:
       warn_after: {count: 12, period: hour}
       error_after: {count: 24, period: hour}
@@ -58,3 +61,9 @@ sources:
                     - coupon
                     - credit_card
                     - gift_card
+
+          - name: order_id
+            description: Foreign key to jaffle_shop orders
+
+          - name: amount
+            description: Amount in US cents
