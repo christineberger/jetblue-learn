@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: raw
+    loaded_at_field: _batched_at
+    loader: airflow
+    freshness:
+      warn_after: {count: 12, period: hour}
+      error_after: {count: 24, period: hour}
+
+    tables:
+      - name: payment
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+
+          - name: paymentmethod
+            tests:
+              - accepted_values:
+                  values:
+                    - bank_transfer
+                    - coupon
+                    - credit_card
+                    - gift_card
+
+          - name: order_id
+            description: Foreign key to jaffle_shop orders
+
+          - name: amount
+            description: Amount in US cents
