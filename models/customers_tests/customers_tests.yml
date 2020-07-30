@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: customers_q01
+    columns:
+      - name: is_ok
+        tests:
+          - is_true
+    tests:
+      - is_ok
