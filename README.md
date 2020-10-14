@@ -1,6 +1,13 @@
 # dbt-learn-demo
 
-> ℹ️ This is a demonstration repo used for dbt Learn. Each [pull-request](https://github.com/fishtown-analytics/dbt-learn-demo/pulls?q=is%3Apr+is%3Amerged+) relates to one section of the group assignment. The branches for each stage have been left intact.
+> ℹ️ This is a demonstration repo used for dbt Learn. Each [pull-request](https://github.com/fishtown-analytics/dbt-learn-demo/pulls?q=is%3Apr+is%3Amerged+) relates to one section of the group assignment. Jump to a different stage by checking out the associated branch:
+
+- [`pre-work`](https://github.com/fishtown-analytics/dbt-learn-demo-v2/tree/pre-work)
+- [`start-of-tests`](https://github.com/fishtown-analytics/dbt-learn-demo-v2/tree/start-of-tests)
+- [`start-of-sources`](https://github.com/fishtown-analytics/dbt-learn-demo-v2/tree/start-of-sources)
+- [`start-of-docs`](https://github.com/fishtown-analytics/dbt-learn-demo-v2/tree/start-of-docs)
+- [`reorganize-project`](https://github.com/fishtown-analytics/dbt-learn-demo-v2/tree/reorganize-project)
+- [`polish-project`](https://github.com/fishtown-analytics/dbt-learn-demo-v2/tree/polish-project)
 
 
 ## Getting started
