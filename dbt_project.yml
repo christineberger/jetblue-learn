@@ -2,8 +2,11 @@
 name: 'jaffle_shop'
 version: '1.0.0'
 config-version: 2
+<<<<<<< HEAD
 
 require-dbt-version: [">=0.17.0", "<0.18.0"]
+=======
+>>>>>>> 163d25728e159b730fc80229e32d055189a0a56a
 
 profile: 'jaffle_shop'
 
