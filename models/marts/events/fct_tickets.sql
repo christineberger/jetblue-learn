@@ -19,7 +19,7 @@ joined as (
         updated_at,
         events.name as event_name,
         events.timezone as event_timezone,
-        orders.total as ticket_amount
+        orders.total as ticket_amount,
         case 
             when orders.status = 'completed' then false
             when orders.status = 'cancelled' then true
