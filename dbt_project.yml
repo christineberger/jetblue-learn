@@ -1,10 +1,9 @@
-
-name: 'jaffle_shop'
-version: '1.0.0'
+name: "jaffle_shop"
+version: "1.0.0"
 config-version: 2
-require-dbt-version: [">=0.17.0", "<0.18.0"]
+require-dbt-version: [">=0.17.0", "<=0.18.1"]
 
-profile: 'jaffle_shop'
+profile: "jaffle_shop"
 
 source-paths: ["models"]
 analysis-paths: ["analysis"]
@@ -14,8 +13,8 @@ macro-paths: ["macros"]
 
 target-path: "target"
 clean-targets:
-    - "target"
-    - "dbt_modules"
+  - "target"
+  - "dbt_modules"
 
 quoting:
   database: false
@@ -26,4 +25,4 @@ models:
   transient: true
   jaffle_shop:
     staging:
-        +materialized: view
+      +materialized: view

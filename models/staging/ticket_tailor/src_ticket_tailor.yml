@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: ticket_tailor
+    database: raw
+    tables:
+      - name: events
+      - name: issued_tickets
+      - name: orders
