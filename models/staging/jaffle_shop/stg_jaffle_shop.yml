@@ -1,8 +1,6 @@
 version: 2
 
 models:
-<<<<<<< HEAD:models/staging/jaffle_shop/stg_jaffle_shop.yml
-=======
   - name: customers
     columns:
       - name: customer_id
@@ -16,8 +14,6 @@ models:
         tests:
           - unique
           - not_null
-
->>>>>>> 805617b0a399930f9c90a3aa0b79c2dae90091ab:models/schema.yml
   - name: stg_customers
     columns:
       - name: customer_id
