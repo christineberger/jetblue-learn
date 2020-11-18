@@ -9,6 +9,7 @@
 - [`reorganize-project`](https://github.com/fishtown-analytics/dbt-learn-demo-v2/tree/reorganize-project)
 - [`polish-project`](https://github.com/fishtown-analytics/dbt-learn-demo-v2/tree/polish-project)
 
+
 ## Getting started
 
 There’s two main ways of working with dbt:
