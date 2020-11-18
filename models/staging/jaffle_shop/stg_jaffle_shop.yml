@@ -1,6 +1,23 @@
 version: 2
 
 models:
+<<<<<<< HEAD:models/staging/jaffle_shop/stg_jaffle_shop.yml
+=======
+  - name: customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+>>>>>>> 805617b0a399930f9c90a3aa0b79c2dae90091ab:models/schema.yml
   - name: stg_customers
     columns:
       - name: customer_id
@@ -26,3 +43,19 @@ models:
           - relationships:
               to: ref('stg_customers')
               field: customer_id
+
+  - name: stg_payments
+    columns:
+      - name: payment_id
+        tests:
+          - unique
+          - not_null
+
+      - name: payment_method
+        tests:
+          - accepted_values:
+              values:
+                - bank_transfer
+                - coupon
+                - credit_card
+                - gift_card
